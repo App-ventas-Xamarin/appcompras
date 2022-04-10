@@ -17,8 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Modelo\" />
-    <Folder Include="Datos\" />
     <Folder Include="VistaModelo\" />
     <Folder Include="Vistas\" />
   </ItemGroup>
