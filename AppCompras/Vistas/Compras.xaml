@@ -16,23 +16,36 @@
                 CornerRadius="0,0,40,40"
                 BackgroundColor="#EFEFEC">
 
-                <Grid ColumnDefinitions="*,*"> <!--Esto significa que se divide en dos columnas de manera proporcional-->
-                    <StackLayout Orientation="Horizontal"
+                <ScrollView HeightRequest="600">
+                    <Grid ColumnDefinitions="*,*" 
+                          Margin="8,0,8,0"
+                          RowDefinitions="80,*">
+                        <!--Esto significa que se divide en dos columnas de manera proporcional-->
+                        <StackLayout Orientation="Horizontal"
                                  Grid.ColumnSpan="2">
-                        <Image Source="https://i.ibb.co/k5gTQFK/flecha-izquierda-2.png"
+                            <Image Source="https://i.ibb.co/k5gTQFK/flecha-izquierda-2.png"
                        HeightRequest="20"
                        Margin="10,0,0,0"/>
-                        <Label Text="Frutas y vegetales"
+                            <Label Text="Frutas y vegetales"
                        VerticalOptions="Center"
                        FontSize="18"
                        TextColor="#3D3D3D"
                        Margin="30,0,0,0"/>
-                        <Image Source="https://i.ibb.co/PrfGsmv/control-de-ecualizador.png"
+                            <Image Source="https://i.ibb.co/PrfGsmv/control-de-ecualizador.png"
                        HeightRequest="30"
                        HorizontalOptions="EndAndExpand"
                        Margin="0,0,10,0"/>
-                    </StackLayout>
-                </Grid>
+                        </StackLayout>
+
+                        <StackLayout x:Name="Izquierda" Grid.Column="0" Grid.Row="1">
+
+                        </StackLayout>
+
+                        <StackLayout x:Name="Derecha" Grid.Column="1" Grid.Row="1">
+
+                        </StackLayout>
+                    </Grid>
+                </ScrollView>
                 
                
             </pancake:PancakeView>
