@@ -6,6 +6,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using AppCompras.Modelo;
 using Android.Print;
+using AppCompras.Datos;
 
 namespace AppCompras.VistaModelo
 {
@@ -13,11 +14,14 @@ namespace AppCompras.VistaModelo
     {
         #region VARIABLES
         string _Texto;
+        int _index;
+        List<Mproductos> _listaproductos;
         #endregion
         #region CONSTRUCTOR
-        public VMcompras(INavigation navigation)
+        public VMcompras(INavigation navigation, StackLayout Carrilderecha, StackLayout Carrilizquierda)
         {
             Navigation = navigation;
+            Mostrarproductos(Carrilderecha, Carrilizquierda);
         }
         #endregion
         #region OBJETOS
@@ -26,10 +30,33 @@ namespace AppCompras.VistaModelo
             get { return _Texto; }
             set { SetValue(ref _Texto, value); }
         }
+        public List<Mproductos> Listaproductos
+        {
+            get { return _listaproductos; }
+            set { SetValue(ref _listaproductos, value); }
+        }
         #endregion
         #region PROCESOS
 
-        public void Dibujarproducto(Mproductos item, int index, StackLayout Carrilderecha, StackLayout Carriizquierda)
+        public async Task Mostrarproductos(StackLayout Carrilderecha, StackLayout Carrilizquierda)
+        {
+            var funcion = new Dproductos();
+            Listaproductos = await funcion.MostrarProductos();
+            var box = new BoxView
+            {
+                HeightRequest = 60
+            };
+            Carrilizquierda.Children.Clear();
+            Carrilderecha.Children.Clear();
+            Carrilderecha.Children.Add(box);
+            foreach(var item in Listaproductos)
+            {
+                Dibujarproductos(item, _index, Carrilderecha, Carrilizquierda);
+                _index++;
+            }
+        }
+
+        public void Dibujarproductos(Mproductos item, int index, StackLayout Carrilderecha, StackLayout Carriizquierda)
         {
             var _ubicacion = Convert.ToBoolean(index % 2);
             var carril = _ubicacion ? Carrilderecha : Carriizquierda;

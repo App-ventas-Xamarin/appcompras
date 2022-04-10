@@ -16,7 +16,7 @@
                 CornerRadius="0,0,40,40"
                 BackgroundColor="#EFEFEC">
 
-                <ScrollView HeightRequest="600">
+                <ScrollView>
                     <Grid ColumnDefinitions="*,*" 
                           Margin="8,0,8,0"
                           RowDefinitions="80,*">
@@ -37,11 +37,11 @@
                        Margin="0,0,10,0"/>
                         </StackLayout>
 
-                        <StackLayout x:Name="Izquierda" Grid.Column="0" Grid.Row="1">
+                        <StackLayout x:Name="Carrilizquierda" Grid.Column="0" Grid.Row="1" >
 
                         </StackLayout>
 
-                        <StackLayout x:Name="Derecha" Grid.Column="1" Grid.Row="1">
+                        <StackLayout x:Name="Carrilderecha" Grid.Column="1" Grid.Row="1" >
 
                         </StackLayout>
                     </Grid>
