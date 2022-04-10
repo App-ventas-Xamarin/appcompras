@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "toTGGFNbWeao0ifAWmIzgoMMnYZKk5Zx6dTI4kELci0eYYk86I6cqiVvzXpQr4hcfINchQv51+M1Zvbt9+Au4w==",
+  "dgSpecHash": "TxtiISB2bHczPnS/kAefCT7k4REpw3CvdJ0cY7HC/wgNygtxz0UgdcrfPPL1JV21lQKbflM0Pu8T6pBlxe/PCQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ENDERSSONMENDOZA\\source\\repos\\AppCompras\\AppCompras\\AppCompras.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\ENDERSSONMENDOZA\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\ENDERSSONMENDOZA\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\ENDERSSONMENDOZA\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\ENDERSSONMENDOZA\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\ENDERSSONMENDOZA\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
     "C:\\Users\\ENDERSSONMENDOZA\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\ENDERSSONMENDOZA\\.nuget\\packages\\system.reactive\\4.0.0\\system.reactive.4.0.0.nupkg.sha512",
@@ -21,7 +22,8 @@
     "C:\\Users\\ENDERSSONMENDOZA\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\ENDERSSONMENDOZA\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
+    "C:\\Users\\ENDERSSONMENDOZA\\.nuget\\packages\\xamarin.forms.pancakeview\\2.3.0.759\\xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCompras.Vistas.Compras"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+            
+             >
+        
+    <StackLayout BackgroundColor="#050506">
+        <Grid
+           RowDefinitions="*,100" 
+              VerticalOptions="FillAndExpand"
+              x:Name="gridproductos">
+            <pancake:PancakeView 
+                CornerRadius="0,0,40,40"
+                BackgroundColor="#EFEFEC">
+
+                <Grid ColumnDefinitions="*,*"> <!--Esto significa que se divide en dos columnas de manera proporcional-->
+                    <StackLayout Orientation="Horizontal"
+                                 Grid.ColumnSpan="2">
+                        <Image Source="https://i.ibb.co/k5gTQFK/flecha-izquierda-2.png"
+                       HeightRequest="20"
+                       Margin="10,0,0,0"/>
+                        <Label Text="Frutas y vegetales"
+                       VerticalOptions="Center"
+                       FontSize="18"
+                       TextColor="#3D3D3D"
+                       Margin="30,0,0,0"/>
+                        <Image Source="https://i.ibb.co/PrfGsmv/control-de-ecualizador.png"
+                       HeightRequest="30"
+                       HorizontalOptions="EndAndExpand"
+                       Margin="0,0,10,0"/>
+                    </StackLayout>
+                </Grid>
+                
+               
+            </pancake:PancakeView>
+
+            <StackLayout Grid.Row="1" BackgroundColor="#050506">
+                
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>
