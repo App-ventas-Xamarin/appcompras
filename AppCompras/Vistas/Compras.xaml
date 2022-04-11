@@ -50,8 +50,61 @@
                
             </pancake:PancakeView>
 
-            <StackLayout Grid.Row="1" BackgroundColor="#050506">
-                
+            <StackLayout Grid.Row="1" BackgroundColor="#050506"
+                         Orientation="Horizontal"
+                         Margin="20,0,10,0">
+                <Label Text="Cart"
+                       FontSize="30"
+                       WidthRequest="100"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       TextColor="White"
+                       />
+
+                <CollectionView
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center"
+                    ItemsSource="{Binding ListaVistapreviaDc}">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout
+                            Orientation="Horizontal"
+                            Span="1"
+                            HorizontalItemSpacing="10">
+                            
+                        </GridItemsLayout>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="4,0"
+                                  WidthRequest="30">
+                                <Frame 
+                                    CornerRadius="24"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center">
+                                </Frame>
+
+                                <Image Source="{Binding Imagen}"
+                                           Margin="0,6"
+                                           WidthRequest="30"
+                                           HorizontalOptions="Center">
+
+                                </Image>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                    
+                </CollectionView>
+                <Frame HeightRequest="40"
+                       WidthRequest="40"
+                       VerticalOptions="Center"
+                       CornerRadius="30"
+                       Padding="5"
+                       BackgroundColor="#FABC4B">
+                    <Label Text="1"
+                           VerticalOptions="Center"
+                           FontSize="15"
+                           FontAttributes="Bold"></Label>
+                </Frame>
             </StackLayout>
         </Grid>
     </StackLayout>

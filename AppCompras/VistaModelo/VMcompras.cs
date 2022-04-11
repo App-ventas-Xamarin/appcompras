@@ -17,6 +17,7 @@ namespace AppCompras.VistaModelo
         string _Texto;
         int _index;
         List<Mproductos> _listaproductos;
+        List<Mdetallecompra> _listaVistapreviaDc;
         #endregion
         #region CONSTRUCTOR
         public VMcompras(INavigation navigation, StackLayout Carrilderecha, StackLayout Carrilizquierda)
@@ -26,10 +27,12 @@ namespace AppCompras.VistaModelo
         }
         #endregion
         #region OBJETOS
-        public string Texto
+
+
+        public List<Mdetallecompra> ListaVistapreviaDc
         {
-            get { return _Texto; }
-            set { SetValue(ref _Texto, value); }
+            get { return _listaVistapreviaDc; }
+            set { SetValue(ref _listaVistapreviaDc, value); }
         }
         public List<Mproductos> Listaproductos
         {
@@ -133,6 +136,12 @@ namespace AppCompras.VistaModelo
         public void ProcesoSimple()
         {
 
+        }
+
+        public async Task MostrarVistapreviaDc()
+        {
+            var funcion = new Ddetallecompras();
+            ListaVistapreviaDc = await funcion.MostrarVistapreviaDc();
         }
         #endregion
         #region COMANDOS

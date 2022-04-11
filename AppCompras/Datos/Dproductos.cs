@@ -25,5 +25,23 @@ namespace AppCompras.Datos
                 }).ToList();
                 
         }
+        // replicando el metodo, pero poir Id
+
+        public async Task<List<Mproductos>> MostrarProductosXid(Mproductos parametro)
+        {
+            return (await Cconexion.firebase
+                .Child("Productos")
+
+                .OnceAsync<Mproductos>()
+                ).Where(a=>a.Key==parametro.Idproducto).Select(item => new Mproductos
+                {
+                    Descripcion = item.Object.Descripcion,
+                    Icono = item.Object.Icono,
+                    Precio = item.Object.Precio,
+                    Peso = item.Object.Peso,
+                    Idproducto = item.Key
+                }).ToList();
+
+        }
     }
 }
