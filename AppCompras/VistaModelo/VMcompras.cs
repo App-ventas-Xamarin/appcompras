@@ -7,6 +7,7 @@ using Xamarin.Forms;
 using AppCompras.Modelo;
 using Android.Print;
 using AppCompras.Datos;
+using AppCompras.Vistas;
 
 namespace AppCompras.VistaModelo
 {
@@ -114,8 +115,13 @@ namespace AppCompras.VistaModelo
             // todas esta area se encarga de traer basicamente los items
             // e irlos renderizandolos en la pantalla del celular...
             frame.Content = stack;
+            var tap = new TapGestureRecognizer();
+            tap.Tapped += async (object sender, EventArgs e) =>
+            {
+                await Navigation.PushAsync(new Agregarcompra(item));
+            };
             carril.Children.Add(frame);
-
+            stack.GestureRecognizers.Add(tap); // al hacer clic a cualquier imagen se va accionar
 
         }
 
