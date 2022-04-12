@@ -29,7 +29,8 @@
                        Margin="10,0,0,0"/>
                             <Label Text="Frutas y vegetales"
                        VerticalOptions="Center"
-                       FontSize="18"
+                       FontSize="20"
+                                   FontAttributes="Bold"
                        TextColor="#3D3D3D"
                        Margin="30,0,0,0"/>
                             <Image Source="https://i.ibb.co/PrfGsmv/control-de-ecualizador.png"
@@ -62,13 +63,18 @@
                         
                     </SwipeGestureRecognizer>
                 </StackLayout.GestureRecognizers>
-                <Label Text="Cart"
+                <!--<Label Text="Carro"
                        FontSize="30"
                        WidthRequest="100"
                        FontAttributes="Bold"
                        VerticalOptions="Center"
                        TextColor="White"
-                       />
+                       />-->
+                <Image Source="https://i.ibb.co/k8r2Wjh/shopping-cart.png"
+                       WidthRequest="50"
+                       HeightRequest="50"
+                       
+                       HorizontalOptions="Start"></Image>
 
                 <CollectionView
                     HorizontalOptions="CenterAndExpand"
@@ -94,7 +100,7 @@
 
                                 <Image Source="{Binding Imagen}"
                                            Margin="0,6"
-                                           WidthRequest="30"
+                                           WidthRequest="20"
                                            HorizontalOptions="Center"
                                         transicion:Transition.Group="{Binding Idproducto}"
                                        transicion:Transition.Name="producto"
@@ -106,15 +112,16 @@
                     </CollectionView.ItemTemplate>
 
                 </CollectionView>
-                <Frame HeightRequest="40"
-                       WidthRequest="40"
+                <Frame HeightRequest="33"
+                       WidthRequest="50"
                        VerticalOptions="Center"
-                       CornerRadius="40"
+                       CornerRadius="30"
                        Padding="5"
                        BackgroundColor="#FABC4B">
-                    <Label Text="1"
+                    <Label Text="{Binding Cantidadtotal}"
                            VerticalOptions="Center"
-                           FontSize="15"
+                           FontSize="20"
+                           TextColor="Black"
                            FontAttributes="Bold"></Label>
                 </Frame>
             </StackLayout>
@@ -132,33 +139,81 @@
                     
                 </SwipeGestureRecognizer>
             </StackLayout.GestureRecognizers>
-            
-            <Label
-                Text="Cart" 
-                TextColor="White"
-                FontSize="32"
-                FontAttributes="Bold"
-                Padding="40,28,40,20"
-                HeightRequest="120"
-                WidthRequest="100"></Label>
+                       
 
+            <Image 
+                
+                Source="https://i.ibb.co/k8r2Wjh/shopping-cart.png"
+                   HeightRequest="60"
+                   WidthRequest="50"
+                   Margin="40,28,40,20"
+                   HorizontalOptions="StartAndExpand"></Image>
+
+
+            
             <CollectionView
                 HeightRequest="300"
-                VerticalOptions="Center">
-                
+                VerticalOptions="Center"
+                ItemsSource="{Binding ListaDc}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Margin="0,12"
+                                     Spacing="10"
+                                     Orientation="Horizontal">
+                            <Grid WidthRequest="100" Margin="10, 0">
+                                <Frame
+                                    BackgroundColor="White"
+                                    CornerRadius="24"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center">
+                                    
+                                </Frame>
+                                <Image Source="{Binding Imagen}"
+                                       WidthRequest="26"
+                                       Margin="0,8"
+                                       HorizontalOptions="Center"
+                                       >
+                                    
+                                </Image>
+                            </Grid>
+                            <Label Text="{Binding Cantidad}"
+                                   TextColor="White"
+                                   VerticalOptions="Center">
+                            </Label>
+
+                            <Label Text="x"
+                                   TextColor="White"
+                                   VerticalOptions="Center">
+                            </Label>
+
+                            <Label Text="{Binding Descripcion}"
+                                   TextColor="White"
+                                   VerticalOptions="Center">
+                            </Label>
+
+                            <Label Text="{Binding Total}"
+                                   TextColor="White"
+                                   VerticalOptions="Center"
+                                   Margin="10,0"
+                                   HorizontalOptions="EndAndExpand">
+                            </Label>
+
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>                
             </CollectionView>
 
             <StackLayout Orientation="Horizontal"
                          Margin="36,0,32,0">
                 <Grid WidthRequest="80">
-                    <Frame CornerRadius="24"
+                    <Frame CornerRadius="40"
                            BackgroundColor="#555555"
                            HorizontalOptions="Center"
                            VerticalOptions="Center">
                         
                     </Frame>
                     <Image Source="https://i.ibb.co/PFpjCPC/entrega-rapida-1.png"
-                           WidthRequest="26"
+                           WidthRequest="40"
                            HorizontalOptions="Center"></Image>
                 </Grid>
 
@@ -166,12 +221,12 @@
                     <Label Text="Delivery"
                            TextColor="White">
                     </Label>
-                    <Label Text="Todas las órdenes superiores a C$ 300 son gratis"
+                    <Label Text="Todas las órdenes superiores a C$ 300 tienen envío gratis"
                            TextColor="Gray">
                     </Label>
                 </StackLayout>
 
-                <Label Text=" C$ 10"
+                <Label Text=" C$ 32"
                        TextColor="White"
                        FontAttributes="Bold"
                        WidthRequest="100"></Label>
@@ -184,14 +239,18 @@
                        FontSize="30"
                        FontAttributes="Bold"></Label>
 
-                <Label Text="C$ 36.8: "
+                <!--#region Suma totales -->
+                <Label Text="C$ 324.50"
                        TextColor="White"
                        FontSize="30"
                        FontAttributes="Bold"
                        HorizontalOptions="EndAndExpand"></Label>
+                <!--#endregion-->
             </StackLayout>
-            <Button Text="Next"
+            <Button Text="Siguiente"
                     BackgroundColor="#Febb44"
+                    FontAttributes="Bold"
+                    FontSize="20"
                     CornerRadius="30"
                     Margin="15,0,15,0"
                     VerticalOptions="EndAndExpand"

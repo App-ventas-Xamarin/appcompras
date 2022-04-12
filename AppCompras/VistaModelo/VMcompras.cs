@@ -17,6 +17,8 @@ namespace AppCompras.VistaModelo
         #region VARIABLES
         string _Texto;
         int _index;
+        string _cantidadtotal;
+        string _totalesc;
         List<Mproductos> _listaproductos;
         List<Mdetallecompra> _listaVistapreviaDc;
         List<Mdetallecompra> _listaDc;
@@ -32,6 +34,16 @@ namespace AppCompras.VistaModelo
         #endregion
         #region OBJETOS
 
+        public string Totalesc
+        {
+            get { return _totalesc; }
+            set { SetValue(ref _totalesc, value); }
+        }
+        public string Cantidadtotal
+        {
+            get { return _cantidadtotal; }
+            set { SetValue(ref _cantidadtotal, value); }
+        }
         public bool IsvisiblePanelDc
         {
             get { return _IsvisiblePaneldetallecompra; }
@@ -62,7 +74,7 @@ namespace AppCompras.VistaModelo
             Listaproductos = await funcion.MostrarProductos();
             var box = new BoxView
             {
-                HeightRequest = 60
+                HeightRequest = 0
             };
             Carrilizquierda.Children.Clear();
             Carrilderecha.Children.Clear();
@@ -195,7 +207,17 @@ namespace AppCompras.VistaModelo
             var funcion = new Ddetallecompras();
             ListaDc = await funcion.MostrarDc();
         }
-
+        public async Task Sumarcantidades()
+        {
+            var funcion = new Ddetallecompras();
+            Cantidadtotal = await funcion.Sumarcantidad();
+                
+        }
+        public async Task MostrarTotales()
+        {
+            var funcion = new Ddetallecompras();
+            Totalesc = await funcion.MostrarTotales();
+        }
         #endregion
         #region COMANDOS
         public ICommand ProcesoAsyncommand => new Command(async () => await ProcesoAsyncrono());

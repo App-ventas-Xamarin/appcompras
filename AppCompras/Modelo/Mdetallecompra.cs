@@ -15,5 +15,7 @@ namespace AppCompras.Modelo
         //  añadir variable de tipo imagen
 
         public string Imagen { get; set; }
+        public string Totales { get; set; }
+        public string Descripcion { get; set; }
     }
 }

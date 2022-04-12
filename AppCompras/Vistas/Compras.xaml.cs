@@ -24,6 +24,8 @@ namespace AppCompras.Vistas
         private async void Compras_Appearing(object sender, EventArgs e)
         {
             await vm.MostrarVistapreviaDc();
+            await vm.MostrarDetalleC();
+            await vm.Sumarcantidades();
         }
 
         private async void DeslizarPanelcontador(object sender, SwipedEventArgs e)

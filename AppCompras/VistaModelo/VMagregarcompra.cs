@@ -15,6 +15,7 @@ namespace AppCompras.VistaModelo
         #region VARIABLES
         string _Texto;
         int _Cantidad;
+        double _precio;
         public Mproductos Parametrosrecibe { get; set; }
         #endregion
         #region CONSTRUCTOR
@@ -30,6 +31,11 @@ namespace AppCompras.VistaModelo
             get { return _Texto; }
             set { SetValue(ref _Texto, value); }
         }
+        public double Precio
+        {
+            get { return _precio; }
+            set { SetValue(ref _precio, value); }
+        }
         public int Cantidad
         {
             get { return _Cantidad; }
@@ -37,6 +43,32 @@ namespace AppCompras.VistaModelo
         }
         #endregion
         #region PROCESOS
+        public async Task Validarcompra()
+        {
+            var funcion = new Ddetallecompras();
+            var listaXidproducto = await funcion.MostrarDcXidproducto(Parametrosrecibe.Idproducto);
+            if (listaXidproducto.Count > 0)
+            {
+                await Editardc();
+            }
+            else
+            {
+                await InsertarDc();
+            }
+        }
+        public async Task Editardc() { 
+            if(Cantidad < 1)
+            {
+                Cantidad = 1;
+            }
+            var funcion = new Ddetallecompras();
+            var parametros = new Mdetallecompra();
+            parametros.Cantidad = Cantidad.ToString();
+            parametros.Idproducto = Parametrosrecibe.Idproducto;
+            parametros.Preciocompra = Parametrosrecibe.Precio;
+            await funcion.Editardetalle(parametros);
+            await Volver();
+        }
         public async Task InsertarDc()
         {
             if (Cantidad == 0)

@@ -61,3 +61,4 @@ C:\Users\ENDERSSONMENDOZA\source\repos\AppCompras\AppCompras.iOS\obj\iPhone\Debu
 C:\Users\ENDERSSONMENDOZA\source\repos\AppCompras\AppCompras.iOS\obj\iPhone\Debug\AppCompras.iOS.csproj.CopyComplete
 C:\Users\ENDERSSONMENDOZA\source\repos\AppCompras\AppCompras.iOS\obj\iPhone\Debug\AppCompras.iOS.exe
 C:\Users\ENDERSSONMENDOZA\source\repos\AppCompras\AppCompras.iOS\obj\iPhone\Debug\AppCompras.iOS.pdb
+C:\Users\ENDERSSONMENDOZA\source\repos\AppCompras\AppCompras.iOS\bin\iPhone\Debug\Plugin.SharedTransitions.dll
