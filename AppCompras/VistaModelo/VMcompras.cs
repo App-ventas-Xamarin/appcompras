@@ -158,6 +158,17 @@ namespace AppCompras.VistaModelo
             var funcion = new Ddetallecompras();
             ListaVistapreviaDc = await funcion.MostrarVistapreviaDc();
         }
+        public async Task MostrarpanelDc(Grid gridproductos, StackLayout paneldetalleC,
+           StackLayout panelcontador)
+        {
+            uint duracion = 700;
+            await Task.WhenAll(
+                panelcontador.FadeTo(0, 500),
+                gridproductos.TranslateTo(0, -200, duracion + 200, Easing.CubicIn),
+                paneldetalleC.TranslateTo(0, -200, duracion, Easing.CubicIn)
+                );
+            IsvisiblePanelDc = true;
+        }
         #endregion
         #region COMANDOS
         public ICommand ProcesoAsyncommand => new Command(async () => await ProcesoAsyncrono());

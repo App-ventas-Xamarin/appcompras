@@ -128,7 +128,9 @@
 
             <StackLayout.GestureRecognizers>
                 <SwipeGestureRecognizer Direction="Down"
-                                        Swiped="SwipeGestureRecognizer_Swiped"
+                                        Swiped="DeslizarPaneldetallecompra">
+                    
+                </SwipeGestureRecognizer>
             </StackLayout.GestureRecognizers>
             
             <Label
