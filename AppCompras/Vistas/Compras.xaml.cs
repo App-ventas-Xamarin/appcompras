@@ -32,7 +32,7 @@ namespace AppCompras.Vistas
         }
         private async void DeslizarPaneldetallecompra(object sender, SwipedEventArgs e)
         {
-
+            await vm.MostrargridProductos(gridproductos, Paneldetallecompra, Panelcontador);
         }
     }
 }

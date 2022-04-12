@@ -19,6 +19,7 @@ namespace AppCompras.VistaModelo
         int _index;
         List<Mproductos> _listaproductos;
         List<Mdetallecompra> _listaVistapreviaDc;
+        List<Mdetallecompra> _listaDc;
         bool _IsvisiblePaneldetallecompra;
         #endregion
         #region CONSTRUCTOR
@@ -45,6 +46,12 @@ namespace AppCompras.VistaModelo
         {
             get { return _listaproductos; }
             set { SetValue(ref _listaproductos, value); }
+        }
+
+        public List<Mdetallecompra> ListaDc
+        {
+            get { return _listaDc; }
+            set { SetValue(ref _listaDc, value); }
         }
         #endregion
         #region PROCESOS
@@ -161,7 +168,7 @@ namespace AppCompras.VistaModelo
         public async Task MostrarpanelDc(Grid gridproductos, StackLayout paneldetalleC,
            StackLayout panelcontador)
         {
-            uint duracion = 700;
+            uint duracion = 700; // la duracion de la animacion
             await Task.WhenAll(
                 panelcontador.FadeTo(0, 500),
                 gridproductos.TranslateTo(0, -200, duracion + 200, Easing.CubicIn),
@@ -169,6 +176,26 @@ namespace AppCompras.VistaModelo
                 );
             IsvisiblePanelDc = true;
         }
+        //  segunda animacion
+
+        public async Task MostrargridProductos(Grid gridproductos, StackLayout paneldetalleC,
+          StackLayout panelcontador)
+        {
+            uint duracion = 700; // la duracion de la animacion
+            await Task.WhenAll(
+                panelcontador.FadeTo(1, 500),
+                gridproductos.TranslateTo(0, 0, duracion + 200, Easing.CubicIn),
+                paneldetalleC.TranslateTo(0, 1000, duracion, Easing.CubicIn)
+                );
+            IsvisiblePanelDc = false;
+        }
+
+        public async Task MostrarDetalleC()
+        {
+            var funcion = new Ddetallecompras();
+            ListaDc = await funcion.MostrarDc();
+        }
+
         #endregion
         #region COMANDOS
         public ICommand ProcesoAsyncommand => new Command(async () => await ProcesoAsyncrono());
