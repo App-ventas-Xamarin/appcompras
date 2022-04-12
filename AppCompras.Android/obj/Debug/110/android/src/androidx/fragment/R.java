@@ -8,13 +8,13 @@ package androidx.fragment;
 
 public final class R {
 	public static final class anim {
-		public static final int fragment_close_enter = 0x7f010020;
-		public static final int fragment_close_exit = 0x7f010021;
-		public static final int fragment_fade_enter = 0x7f010022;
-		public static final int fragment_fade_exit = 0x7f010023;
-		public static final int fragment_fast_out_extra_slow_in = 0x7f010024;
-		public static final int fragment_open_enter = 0x7f010025;
-		public static final int fragment_open_exit = 0x7f010026;
+		public static final int fragment_close_enter = 0x7f01002c;
+		public static final int fragment_close_exit = 0x7f01002d;
+		public static final int fragment_fade_enter = 0x7f01002e;
+		public static final int fragment_fade_exit = 0x7f01002f;
+		public static final int fragment_fast_out_extra_slow_in = 0x7f010030;
+		public static final int fragment_open_enter = 0x7f010031;
+		public static final int fragment_open_exit = 0x7f010032;
 	}
 	public static final class attr {
 		public static final int alpha = 0x7f030028;

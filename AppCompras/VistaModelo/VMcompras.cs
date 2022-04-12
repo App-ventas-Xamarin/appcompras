@@ -8,6 +8,7 @@ using AppCompras.Modelo;
 using Android.Print;
 using AppCompras.Datos;
 using AppCompras.Vistas;
+using Plugin.SharedTransitions;
 
 namespace AppCompras.VistaModelo
 {
@@ -18,17 +19,23 @@ namespace AppCompras.VistaModelo
         int _index;
         List<Mproductos> _listaproductos;
         List<Mdetallecompra> _listaVistapreviaDc;
+        bool _IsvisiblePaneldetallecompra;
         #endregion
         #region CONSTRUCTOR
         public VMcompras(INavigation navigation, StackLayout Carrilderecha, StackLayout Carrilizquierda)
         {
             Navigation = navigation;
             Mostrarproductos(Carrilderecha, Carrilizquierda);
+            IsvisiblePanelDc = false;
         }
         #endregion
         #region OBJETOS
 
-
+        public bool IsvisiblePanelDc
+        {
+            get { return _IsvisiblePaneldetallecompra; }
+            set { SetValue(ref _IsvisiblePaneldetallecompra, value); }
+        }
         public List<Mdetallecompra> ListaVistapreviaDc
         {
             get { return _listaVistapreviaDc; }
@@ -119,10 +126,18 @@ namespace AppCompras.VistaModelo
             // e irlos renderizandolos en la pantalla del celular...
             frame.Content = stack;
             var tap = new TapGestureRecognizer();
+
+
             tap.Tapped += async (object sender, EventArgs e) =>
             {
+                var page = (App.Current.MainPage as SharedTransitionNavigationPage).CurrentPage;
+                SharedTransitionNavigationPage.SetBackgroundAnimation(page, BackgroundAnimation.SlideFromBottom);
+                SharedTransitionNavigationPage.SetTransitionDuration(page, 1000);
+                SharedTransitionNavigationPage.SetTransitionSelectedGroup(page, item.Idproducto);
                 await Navigation.PushAsync(new Agregarcompra(item));
             };
+
+
             carril.Children.Add(frame);
             stack.GestureRecognizers.Add(tap); // al hacer clic a cualquier imagen se va accionar
 

@@ -4,14 +4,15 @@
              x:Class="AppCompras.Vistas.Compras"
              NavigationPage.HasNavigationBar="False"
              xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-            
+             xmlns:transicion="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
              >
         
     <StackLayout BackgroundColor="#050506">
         <Grid
-           RowDefinitions="*,100" 
+           RowDefinitions="*,100"  
               VerticalOptions="FillAndExpand"
-              x:Name="gridproductos">
+              x:Name="gridproductos"
+       >
             <pancake:PancakeView 
                 CornerRadius="0,0,40,40"
                 BackgroundColor="#EFEFEC">
@@ -50,9 +51,17 @@
                
             </pancake:PancakeView>
 
+            <!--#region panel contador -->
             <StackLayout Grid.Row="1" BackgroundColor="#050506"
                          Orientation="Horizontal"
-                         Margin="20,0,10,0">
+                         Margin="20,0,10,0"
+                         x:Name="Panelcontador">
+                <StackLayout.GestureRecognizers>
+                    <SwipeGestureRecognizer Direction="Up"
+                                            Swiped="DeslizarPanelcontador">
+                        
+                    </SwipeGestureRecognizer>
+                </StackLayout.GestureRecognizers>
                 <Label Text="Cart"
                        FontSize="30"
                        WidthRequest="100"
@@ -70,7 +79,7 @@
                             Orientation="Horizontal"
                             Span="1"
                             HorizontalItemSpacing="10">
-                            
+
                         </GridItemsLayout>
                     </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
@@ -86,18 +95,21 @@
                                 <Image Source="{Binding Imagen}"
                                            Margin="0,6"
                                            WidthRequest="30"
-                                           HorizontalOptions="Center">
+                                           HorizontalOptions="Center"
+                                        transicion:Transition.Group="{Binding Idproducto}"
+                                       transicion:Transition.Name="producto"
+                                       />
 
-                                </Image>
+
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
-                    
+
                 </CollectionView>
                 <Frame HeightRequest="40"
                        WidthRequest="40"
                        VerticalOptions="Center"
-                       CornerRadius="30"
+                       CornerRadius="40"
                        Padding="5"
                        BackgroundColor="#FABC4B">
                     <Label Text="1"
@@ -106,6 +118,83 @@
                            FontAttributes="Bold"></Label>
                 </Frame>
             </StackLayout>
+            <!--#endregion-->
         </Grid>
+        <!--#region PaneldetalleCompra -->
+        <StackLayout 
+            x:Name="Paneldetallecompra"
+            VerticalOptions="FillAndExpand"
+            IsVisible="{Binding IsvisiblePanelDc}">
+
+            <StackLayout.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Down"
+                                        Swiped="SwipeGestureRecognizer_Swiped"
+            </StackLayout.GestureRecognizers>
+            
+            <Label
+                Text="Cart" 
+                TextColor="White"
+                FontSize="32"
+                FontAttributes="Bold"
+                Padding="40,28,40,20"
+                HeightRequest="120"
+                WidthRequest="100"></Label>
+
+            <CollectionView
+                HeightRequest="300"
+                VerticalOptions="Center">
+                
+            </CollectionView>
+
+            <StackLayout Orientation="Horizontal"
+                         Margin="36,0,32,0">
+                <Grid WidthRequest="80">
+                    <Frame CornerRadius="24"
+                           BackgroundColor="#555555"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center">
+                        
+                    </Frame>
+                    <Image Source="https://i.ibb.co/PFpjCPC/entrega-rapida-1.png"
+                           WidthRequest="26"
+                           HorizontalOptions="Center"></Image>
+                </Grid>
+
+                <StackLayout Margin="20,0,100,0">
+                    <Label Text="Delivery"
+                           TextColor="White">
+                    </Label>
+                    <Label Text="Todas las órdenes superiores a C$ 300 son gratis"
+                           TextColor="Gray">
+                    </Label>
+                </StackLayout>
+
+                <Label Text=" C$ 10"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       WidthRequest="100"></Label>
+                
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         Margin="50, 50,50,0">
+                <Label Text="Total: "
+                       TextColor="White"
+                       FontSize="30"
+                       FontAttributes="Bold"></Label>
+
+                <Label Text="C$ 36.8: "
+                       TextColor="White"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       HorizontalOptions="EndAndExpand"></Label>
+            </StackLayout>
+            <Button Text="Next"
+                    BackgroundColor="#Febb44"
+                    CornerRadius="30"
+                    Margin="15,0,15,0"
+                    VerticalOptions="EndAndExpand"
+                    HeightRequest="60"></Button>
+        </StackLayout>
+        <!--#endregion-->
     </StackLayout>
 </ContentPage>

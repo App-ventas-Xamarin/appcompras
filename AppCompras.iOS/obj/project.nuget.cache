@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dKbu32CDURMgtm+6quBX0wWuYQBHeBt1jiD1zu0WAE7WFFL5dyXC6CaVVPY40i41zlihfamdOKNXaWccsNEvmA==",
+  "dgSpecHash": "PoMpVXCK6TLSP7Qy1gT8+Pfs3GxZJQbhsdp2PULhEm0ne2y4wdEhp7egU0nnp2ARJHz/KPBHtcxcTecWFyewNg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ENDERSSONMENDOZA\\source\\repos\\AppCompras\\AppCompras.iOS\\AppCompras.iOS.csproj",
   "expectedPackageFiles": [
@@ -15,7 +15,8 @@
     "C:\\Users\\ENDERSSONMENDOZA\\.nuget\\packages\\system.runtime.interopservices.windowsruntime\\4.3.0\\system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
-    "C:\\Users\\ENDERSSONMENDOZA\\.nuget\\packages\\xamarin.forms.pancakeview\\2.3.0.759\\xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512"
+    "C:\\Users\\ENDERSSONMENDOZA\\.nuget\\packages\\xamarin.forms.pancakeview\\2.3.0.759\\xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512",
+    "C:\\Users\\ENDERSSONMENDOZA\\.nuget\\packages\\xamarin.plugin.sharedtransitions\\2.4.0\\xamarin.plugin.sharedtransitions.2.4.0.nupkg.sha512"
   ],
   "logs": []
 }

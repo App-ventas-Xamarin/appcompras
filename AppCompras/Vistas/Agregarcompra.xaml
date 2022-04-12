@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppCompras.Vistas.Agregarcompra">
+             x:Class="AppCompras.Vistas.Agregarcompra"
+             xmlns:transicion="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
+             >
     <ContentPage.Content>
         <StackLayout BackgroundColor="White">
             <Image Source="https://i.ibb.co/k5gTQFK/flecha-izquierda-2.png"
@@ -18,6 +20,7 @@
                 <Image Source="{Binding Parametrosrecibe.Icono}"
                    Margin="0,0,0,30"
                    HeightRequest="220"
+                       transicion:Transition.Name="producto"
                     />
                 <Label Text="{Binding Parametrosrecibe.Descripcion}"
                    FontAttributes="Bold"

@@ -36,9 +36,9 @@ public final class R {
 		public static final int design_bottom_sheet_slide_out = 0x7f010019;
 		public static final int design_snackbar_in = 0x7f01001a;
 		public static final int design_snackbar_out = 0x7f01001b;
-		public static final int mtrl_bottom_sheet_slide_in = 0x7f010027;
-		public static final int mtrl_bottom_sheet_slide_out = 0x7f010028;
-		public static final int mtrl_card_lowers_interpolator = 0x7f010029;
+		public static final int mtrl_bottom_sheet_slide_in = 0x7f010033;
+		public static final int mtrl_bottom_sheet_slide_out = 0x7f010034;
+		public static final int mtrl_card_lowers_interpolator = 0x7f010035;
 	}
 	public static final class animator {
 		public static final int design_appbar_state_list_animator = 0x7f020000;
@@ -3533,10 +3533,10 @@ public final class R {
 		public static final int ViewStubCompat_android_layout = 1;
 	}
 	public static final class xml {
-		public static final int standalone_badge = 0x7f110001;
-		public static final int standalone_badge_gravity_bottom_end = 0x7f110002;
-		public static final int standalone_badge_gravity_bottom_start = 0x7f110003;
-		public static final int standalone_badge_gravity_top_start = 0x7f110004;
-		public static final int standalone_badge_offset = 0x7f110005;
+		public static final int standalone_badge = 0x7f120001;
+		public static final int standalone_badge_gravity_bottom_end = 0x7f120002;
+		public static final int standalone_badge_gravity_bottom_start = 0x7f120003;
+		public static final int standalone_badge_gravity_top_start = 0x7f120004;
+		public static final int standalone_badge_offset = 0x7f120005;
 	}
 }

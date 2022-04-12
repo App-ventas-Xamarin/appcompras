@@ -239,6 +239,18 @@
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.PancakeView.dll": {}
         }
+      },
+      "Xamarin.Plugin.SharedTransitions/2.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.5.0.725"
+        },
+        "compile": {
+          "lib/netstandard2.0/Plugin.SharedTransitions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Plugin.SharedTransitions.dll": {}
+        }
       }
     }
   },
@@ -1455,6 +1467,25 @@
         "xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512",
         "xamarin.forms.pancakeview.nuspec"
       ]
+    },
+    "Xamarin.Plugin.SharedTransitions/2.4.0": {
+      "sha512": "upju4Pst1knGfdLQWWjT4ASuKQk2s7RhK8B4Yw6TILRerPZmhPmqJ/fV8NIR6HuLIsX8CxOg8fR+tNjOC6YwFA==",
+      "type": "package",
+      "path": "xamarin.plugin.sharedtransitions/2.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/Plugin.SharedTransitions.dll",
+        "lib/monoandroid10.0/Plugin.SharedTransitions.xml",
+        "lib/monoandroid90/Plugin.SharedTransitions.dll",
+        "lib/monoandroid90/Plugin.SharedTransitions.xml",
+        "lib/netstandard2.0/Plugin.SharedTransitions.dll",
+        "lib/netstandard2.0/Plugin.SharedTransitions.xml",
+        "lib/xamarinios10/Plugin.SharedTransitions.dll",
+        "lib/xamarinios10/Plugin.SharedTransitions.xml",
+        "xamarin.plugin.sharedtransitions.2.4.0.nupkg.sha512",
+        "xamarin.plugin.sharedtransitions.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -1463,7 +1494,8 @@
       "NETStandard.Library >= 2.0.3",
       "Xamarin.Essentials >= 1.6.1",
       "Xamarin.Forms >= 5.0.0.2012",
-      "Xamarin.Forms.PancakeView >= 2.3.0.759"
+      "Xamarin.Forms.PancakeView >= 2.3.0.759",
+      "Xamarin.Plugin.SharedTransitions >= 2.4.0"
     ]
   },
   "packageFolders": {
@@ -1531,6 +1563,10 @@
           "Xamarin.Forms.PancakeView": {
             "target": "Package",
             "version": "[2.3.0.759, )"
+          },
+          "Xamarin.Plugin.SharedTransitions": {
+            "target": "Package",
+            "version": "[2.4.0, )"
           }
         },
         "imports": [

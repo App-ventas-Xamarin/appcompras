@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using AppCompras.Vistas;
+using Plugin.SharedTransitions;
 
 namespace AppCompras
 {
@@ -11,7 +12,7 @@ namespace AppCompras
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Compras());
+            MainPage = new SharedTransitionNavigationPage(new Compras());
         }
 
         protected override void OnStart()
