@@ -27,7 +27,7 @@
                             <Image Source="https://i.ibb.co/k5gTQFK/flecha-izquierda-2.png"
                        HeightRequest="20"
                        Margin="10,0,0,0"/>
-                            <Label Text="Frutas y vegetales"
+                            <Label Text="Caprichos Ropa y calzado"
                        VerticalOptions="Center"
                        FontSize="20"
                                    FontAttributes="Bold"
@@ -70,9 +70,9 @@
                        VerticalOptions="Center"
                        TextColor="White"
                        />-->
-                <Image Source="https://i.ibb.co/k8r2Wjh/shopping-cart.png"
-                       WidthRequest="50"
-                       HeightRequest="50"
+                <Image Source="https://i.ibb.co/Qn4yHVD/catalogo.png"
+                       WidthRequest="70"
+                       HeightRequest="70"
                        
                        HorizontalOptions="Start"></Image>
 
@@ -143,9 +143,9 @@
 
             <Image 
                 
-                Source="https://i.ibb.co/k8r2Wjh/shopping-cart.png"
-                   HeightRequest="60"
-                   WidthRequest="50"
+                Source="https://i.ibb.co/Qn4yHVD/catalogo.png"
+                   HeightRequest="80"
+                   WidthRequest="80"
                    Margin="40,28,40,20"
                    HorizontalOptions="StartAndExpand"></Image>
 
@@ -176,6 +176,7 @@
                                     
                                 </Image>
                             </Grid>
+                            
                             <Label Text="{Binding Cantidad}"
                                    TextColor="White"
                                    VerticalOptions="Center">
@@ -221,12 +222,12 @@
                     <Label Text="Delivery"
                            TextColor="White">
                     </Label>
-                    <Label Text="Todas las órdenes superiores a C$ 300 tienen envío gratis"
+                    <Label Text="Todos los pedidos con un valor superior a $ 80, cuentan con envío gratis a cualquier lugar de Nicaragua 🚚🚚🚚"
                            TextColor="Gray">
                     </Label>
                 </StackLayout>
 
-                <Label Text=" C$ 32"
+                <Label Text=" $ 32"
                        TextColor="White"
                        FontAttributes="Bold"
                        WidthRequest="100"></Label>
@@ -240,14 +241,14 @@
                        FontAttributes="Bold"></Label>
 
                 <!--#region Suma totales -->
-                <Label Text="C$ 324.50"
+                <Label Text="$ 1500.36"
                        TextColor="White"
                        FontSize="30"
                        FontAttributes="Bold"
                        HorizontalOptions="EndAndExpand"></Label>
                 <!--#endregion-->
             </StackLayout>
-            <Button Text="Siguiente"
+            <Button Text="Comprar"
                     BackgroundColor="#Febb44"
                     FontAttributes="Bold"
                     FontSize="20"

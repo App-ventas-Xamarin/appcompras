@@ -155,10 +155,11 @@ namespace AppCompras.Datos
         {
             var funcion = new Ddetallecompras();
             var lista = await funcion.Mostrarcantidades();
-            double cantidad = 0;
+            double cantidad = 0, auxiliar = 0;
             foreach(var hobit in lista)
             {
-                cantidad += Convert.ToDouble(hobit.Cantidad);                
+                auxiliar += Convert.ToDouble(hobit.Cantidad);
+                cantidad = auxiliar;
             }
             return cantidad.ToString();
         }

@@ -20,7 +20,7 @@ namespace AppCompras.Datos
                     Descripcion = item.Object.Descripcion,
                     Icono = item.Object.Icono,
                     Precio = item.Object.Precio,
-                    Peso = item.Object.Peso,
+                    Marca = item.Object.Marca,
                     Idproducto = item.Key
                 }).ToList();
                 
@@ -38,7 +38,7 @@ namespace AppCompras.Datos
                     Descripcion = item.Object.Descripcion,
                     Icono = item.Object.Icono,
                     Precio = item.Object.Precio,
-                    Peso = item.Object.Peso,
+                    Marca = item.Object.Marca,
                     Idproducto = item.Key
                 }).ToList();
 

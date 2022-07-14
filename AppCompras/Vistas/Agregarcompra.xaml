@@ -20,7 +20,7 @@
                      Spacing="20">
                 <Image Source="{Binding Parametrosrecibe.Icono}"
                    Margin="0,0,0,30"
-                   HeightRequest="220"
+                   HeightRequest="250"
                        transicion:Transition.Name="producto"
                     />
                 <Label Text="{Binding Parametrosrecibe.Descripcion}"
@@ -78,7 +78,7 @@
                         </Label>
 
                     </Grid>
-                    <Label Text="C$"
+                    <Label Text="$"
                             FontAttributes="Bold"
                        FontSize="36"
                        TextColor="Black" ></Label>
@@ -88,12 +88,12 @@
                        TextColor="Black"/>
                 </StackLayout>
                 
-                <Label Text="Descripcion del producto"
+                <Label Text="Descripción del producto"
                    FontAttributes="Bold"
                    FontSize="25"
                    TextColor="Black"
                    Margin="0,14,0,0"/>
-                <Label Text="Informacion general del producto."
+                <Label Text="Información general del producto."
                    TextColor="Gray"
                    FontSize="18"/>
             </StackLayout>
@@ -112,7 +112,7 @@
 
                 <Button 
                     
-                    Text="Agregar al carrito"
+                    Text="Agregar al catálogo"
                     BackgroundColor="#FEBB44"
                     CornerRadius="40"
                    FontAttributes="Bold"

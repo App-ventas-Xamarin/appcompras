@@ -131,7 +131,7 @@ namespace AppCompras.VistaModelo
 
             var labelpeso = new Label
             {
-                Text = item.Peso,
+                Text = item.Marca,
                 FontSize = 13,
                 TextColor = Color.FromHex("#cccccc"),
                 CharacterSpacing = 1
