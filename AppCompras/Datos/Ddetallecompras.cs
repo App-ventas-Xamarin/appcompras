@@ -20,6 +20,7 @@ namespace AppCompras.Datos
                     Cantidad = parametros.Cantidad,
                     Idproducto = parametros.Idproducto,
                     Preciocompra = parametros.Preciocompra,
+                    TotalFinal = parametros.TotalFinal,
                     Total = parametros.Total
                 });
         }
@@ -77,6 +78,7 @@ namespace AppCompras.Datos
                     Idproducto = item.Object.Idproducto,
                     Iddetallecompra = item.Key,
                     Cantidad = item.Object.Cantidad,
+
                     Total = item.Object.Total,
                     
                 })
@@ -93,6 +95,7 @@ namespace AppCompras.Datos
                 parametros.Imagen = listaproductos[0].Icono;
                 parametros.Descripcion = listaproductos[0].Descripcion;
                 parametros.Cantidad = hobit.Cantidad;
+                parametros.TotalFinal = hobit.TotalFinal;
                 parametros.Total = hobit.Total;
                 ListaDc.Add(parametros);
             }
@@ -129,6 +132,8 @@ namespace AppCompras.Datos
                 .Child(data.Key)
                 .PutAsync(data.Object);
         }
+
+      
 
         public async Task<string> MostrarTotales()
         {

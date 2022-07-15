@@ -10,6 +10,7 @@ namespace AppCompras.Modelo
         public string Preciocompra { get; set; }
         public string Idproducto { get; set; }
         public string Total { get; set; }
+        public string TotalFinal { get; set; }
         public string Iddetallecompra { get; set; }
 
         //  añadir variable de tipo imagen
